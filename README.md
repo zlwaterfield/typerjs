@@ -1,9 +1,9 @@
-typerjs (v 0.0.1)
+typerjs (v 0.0.2)
 ========================
 
 Introduction
 ------------
-Simple function that types ourt strings and arrays of strings for cool typing effects
+Simple function that types out strings and arrays of strings for cool typing effects
 
 First run
 ---------

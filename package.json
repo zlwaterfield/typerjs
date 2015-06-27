@@ -1,6 +1,6 @@
 {
   "name": "typerjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple function that types ourt strings and arrays of strings for cool typing effects",
   "main": "Gruntfile.js",
   "dependencies": {
@@ -17,8 +17,8 @@
     "url": "https://github.com/zlwaterfield/typerjs"
   },
   "keywords": [
-    "Github",
-    "API"
+    "typerjs",
+    "type"
   ],
   "author": "Zach Waterfield <zlwaterfield@gmail.com> (zlwaterfield.com)",
   "license": "MIT",

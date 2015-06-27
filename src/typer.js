@@ -13,7 +13,6 @@ var TyperJs = (function () {
         } else if(typeof(data) == "object") {
             showArray(data, attr, string_index, array_index, interval);
         }
-
     }
 
     var showText = function (data, attr, index, interval) {
