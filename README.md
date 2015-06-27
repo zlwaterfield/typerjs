@@ -57,7 +57,7 @@ var type = new typerJs({
 
 ```javascript
 var type = new typerJs({
-    data: ["hello1","hello2","hello3]",
+    data: ["hello1","hello2","hello3"],
     attribute: ".message2",
     interval: 2000
 });
