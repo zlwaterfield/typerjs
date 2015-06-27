@@ -1,4 +1,4 @@
-typerjs (v 0.0.2)
+typerjs (v 0.0.3)
 ========================
 
 Introduction
@@ -54,12 +54,14 @@ var type = new typerJs({
     interval: 500
 });
 ```
-
+** Do to timing issues, currently the max sized string per array index supported it 20. (To be increased at a later time).
 ```javascript
 var type = new typerJs({
     data: ["hello1","hello2","hello3"],
     attribute: ".message2",
-    interval: 2000
+    interval: 2000,
+    highlightColor: "#444",
+    textHighlightColor: "#fff"
 });
 ```
 

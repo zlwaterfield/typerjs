@@ -1,11 +1,7 @@
 var type = new TyperJs({
-    data: ["hllo", "hsfdf"],
-    attribute: ".message1",
-    interval: 500
-});
-
-var type = new TyperJs({
-    data: "hllo",
-    attribute: ".message2",
-    interval: 500
+    data: ["hooray", "this is a long string to show it will be ignored", "happy day", "freezies", "Santa Clause"],
+    attribute: ".message",
+    interval: 500,
+    highlightColor: "#444",
+    textHighlightColor: "#fff"
 });
