@@ -43,8 +43,7 @@ var TyperJs = (function () {
     var deleteWord = function(data, attr, string_index, array_index, interval) {
         $(attr).empty();
         string_index = -1;
-        console.log(data.length);
-        console.log(array_index);
+
         if(data.length - 1 === array_index) {
             array_index = 0;
             showArray(data, attr, string_index, array_index, interval);
