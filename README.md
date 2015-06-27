@@ -41,8 +41,10 @@ Full list of options supported
 ------------------------------
 
  - `data (string or array)`
- - `interval (time between each typed letter)`
  - `attribute (attribute by class or id to add to)`
+ - `interval (time between each typed letter)`
+ - `highlightColor`
+ - `textHighlightColor`
 
 Example
 -------
