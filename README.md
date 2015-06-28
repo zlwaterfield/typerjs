@@ -1,5 +1,5 @@
-typerjs (v 0.0.3)
-========================
+![alt text](http://zlwaterfield.com/images/projects/typerjs-small.png "Logo") (v 0.0.3)
+=======================================================================================
 
 Introduction
 ------------
@@ -29,7 +29,7 @@ You'll have to host the library yourself, so:
 ```javascript
 var typerjs = require('typerjs');
 ```
-  
+
  - Pull in with script (in html)
 
 ```html
@@ -50,7 +50,7 @@ Example
 -------
 
 ```javascript
-var type = new typerJs({
+var type = new typerjs({
     data: "hello",
     attribute: ".message1",
     interval: 500
@@ -58,7 +58,7 @@ var type = new typerJs({
 ```
 ** Do to timing issues, currently the max sized string per array index supported it 20. (To be increased at a later time).
 ```javascript
-var type = new typerJs({
+var type = new typerjs({
     data: ["hello1","hello2","hello3"],
     attribute: ".message2",
     interval: 2000,
