@@ -49,10 +49,10 @@ Full list of options supported
  - `highlight (boolean [default - false])(option to remove string by highlighting/deleting all or backspacing)`
  
 ### highlight
-![alt text](http://zlwaterfield.com/images/highlight.gif "highlight")
+![alt text](http://zlwaterfield.com/images/github/highlight-new.gif "highlight")
 
 ### backspace
-![alt text](http://zlwaterfield.com/images/backspace.gif "backspace")
+![alt text](http://zlwaterfield.com/images/github/backspace-new.gif "backspace")
  
 
 Example
