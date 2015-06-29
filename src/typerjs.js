@@ -7,7 +7,7 @@ var TyperJs = (function () {
         opts.string_index = -1;
         opts.array_index = 0;
         opts.colors = colorObject(opts);
-        opts.highlight = opts.highlight == undefined ? false : opts.highlight;
+        opts.highlight = opts.highlight === undefined ? false : opts.highlight;
 
         if(typeof data === "string") {
             showText(opts);
