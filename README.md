@@ -45,7 +45,14 @@ Full list of options supported
  - `interval (time between each typed letter)`
  - `highlightColor`
  - `textHighlightColor`
- - `highlight (boolean)(option to remove string by highlighting and deleting or backspacing)`
+ - `highlight (boolean [default - false])(option to remove string by highlighting/deleting all or backspacing)`
+ 
+### highlight
+![alt text](http://zlwaterfield.com/images/highlight.gif "highlight")
+
+### backspace
+![alt text](http://zlwaterfield.com/images/backspace.gif "backspace")
+ 
 
 Example
 -------
