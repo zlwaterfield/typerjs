@@ -1,7 +1,8 @@
 var type = new TyperJs({
-    data: ["Santa Clause", "Beer", "Happy Day"],
+    data: ["Santa Claus", "Beer", "Happy Day"],
     attribute: ".message",
-    interval: 300,
+    type_interval: 200,
+    remove_interval: 20,
     highlightColor: "#444",
     textHighlightColor: "#fff",
     highlight: false

@@ -1,4 +1,4 @@
-![alt text](http://zlwaterfield.com/images/projects/typerjs-small.png "Logo") (v 0.0.4 beta)
+![alt text](http://zlwaterfield.com/images/projects/typerjs-small.png "Logo") (v 0.0.5 beta)
 =======================================================================================
 
 Introduction
@@ -42,7 +42,8 @@ Full list of options supported
 
  - `data (string or array)`
  - `attribute (attribute by class or id to add to)`
- - `interval (time between each typed letter)`
+ - `type_interval (time between each typed letter)`
+ - `remove_interval (time between delete/removable of a letter)`
  - `highlightColor`
  - `textHighlightColor`
  - `highlight (boolean [default - false])(option to remove string by highlighting/deleting all or backspacing)`
@@ -65,16 +66,12 @@ var type = new typerjs({
 });
 ```
 
-Do to timing issues, currently :
- - `Max sized string per array index supported it 20. (To be increased at a later time)`
- - `Lowest interval is 250 (To be increased at a later time)`
-
-
 ```javascript
 var type = new typerjs({
-    data: ["hello1","hello2","hello3"],
+    data: ["Santa Claus", "Beer", "Happy Day"],
     attribute: ".message2",
-    interval: 2000,
+    type_interval: 200,
+    remove_interval: 20,
     highlightColor: "#444",
     textHighlightColor: "#fff",
     highlight:true
