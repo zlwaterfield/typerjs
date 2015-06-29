@@ -1,4 +1,4 @@
-![alt text](http://zlwaterfield.com/images/projects/typerjs-small.png "Logo") (v 0.0.3)
+![alt text](http://zlwaterfield.com/images/projects/typerjs-small.png "Logo") (v 0.0.4 beta)
 =======================================================================================
 
 Introduction
@@ -60,7 +60,7 @@ var type = new typerjs({
 
 Do to timing issues, currently :
  - `Max sized string per array index supported it 20. (To be increased at a later time)`
- - `Lowest interval is 200 (To be increased at a later time)`
+ - `Lowest interval is 250 (To be increased at a later time)`
 
 
 ```javascript

@@ -8,6 +8,10 @@ var TyperJs = (function () {
         var array_index = 0;
         var boolhighlight = opts.highlight;
 
+        if(interval < 250) {
+            interval = 250;
+        }
+
         var colors = colorObject(opts);
 
         if(typeof data === "string") {
@@ -78,7 +82,9 @@ var TyperJs = (function () {
                 $(attr).empty();
             });
         } else {
-            backspace(data, attr, position-1, array_index, interval);
+            backspace(data, attr, position-1, array_index, interval, function () {
+                $(attr).empty(); //make sure its empty
+            });
         }
 
         string_index = -1;
@@ -90,17 +96,17 @@ var TyperJs = (function () {
         }
     };
 
-    var backspace = function (data, attr, string_index, array_index, interval) {
+    var backspace = function (data, attr, string_index, array_index, interval, callback) {
 
         var string = data[array_index];
 
         if (string_index >= 0 ) {
             $(attr).html(string.slice(0,string_index));
             setTimeout(function () {
-                backspace(data, attr, string_index-1, array_index, interval);
+                backspace(data, attr, string_index-1, array_index, interval, callback);
             }, 15);
         } else {
-            //showArray(data, attr, string_index, array_index+1, interval);
+            return callback();
         }
 
     };
