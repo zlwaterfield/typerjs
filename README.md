@@ -45,6 +45,7 @@ Full list of options supported
  - `interval (time between each typed letter)`
  - `highlightColor`
  - `textHighlightColor`
+ - `highlight (boolean)(option to remove string by highlighting and deleting or backspacing)`
 
 Example
 -------
@@ -56,14 +57,20 @@ var type = new typerjs({
     interval: 500
 });
 ```
-** Do to timing issues, currently the max sized string per array index supported it 20. (To be increased at a later time).
+
+Do to timing issues, currently :
+ - `Max sized string per array index supported it 20. (To be increased at a later time)`
+ - `Lowest interval is 200 (To be increased at a later time)`
+
+
 ```javascript
 var type = new typerjs({
     data: ["hello1","hello2","hello3"],
     attribute: ".message2",
     interval: 2000,
     highlightColor: "#444",
-    textHighlightColor: "#fff"
+    textHighlightColor: "#fff",
+    highlight:true
 });
 ```
 

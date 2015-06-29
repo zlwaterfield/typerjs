@@ -6,13 +6,14 @@ var TyperJs = (function () {
         var interval = opts.interval;
         var string_index = -1;
         var array_index = 0;
+        var boolhighlight = opts.highlight;
 
         var colors = colorObject(opts);
 
         if(typeof data === "string") {
             showText(data, attr, string_index, interval);
         } else if(typeof(data) === "object") {
-            showArray(data, attr, string_index, array_index, interval, colors);
+            showArray(data, attr, string_index, array_index, interval, colors, boolhighlight);
         }
     }
 
@@ -23,7 +24,7 @@ var TyperJs = (function () {
         }
     };
 
-    var showArray = function (data, attr, string_index, array_index, interval, colors) {
+    var showArray = function (data, attr, string_index, array_index, interval, colors, boolhighlight) {
         //TODO : add randomization of array index
         //array_index = Math.floor(Math.random()*data.length);
         var string = data[array_index];
@@ -33,9 +34,9 @@ var TyperJs = (function () {
         }
         if (string_index < string.length) {
             $(attr).append(string[string_index]);
-            setTimeout(function () { showArray(data, attr, string_index+1, array_index, interval, colors); }, interval);
+            setTimeout(function () { showArray(data, attr, string_index+1, array_index, interval, colors, boolhighlight); }, interval);
         } else {
-            deleteWord(data, attr, string_index, array_index, interval, colors);
+            deleteWord(data, attr, string_index, array_index, interval, colors, boolhighlight);
         }
     };
 
@@ -70,19 +71,38 @@ var TyperJs = (function () {
         return colors;
     };
 
-    var deleteWord = function(data, attr, string_index, array_index, interval, colors) {
+    var deleteWord = function(data, attr, string_index, array_index, interval, colors, boolhighlight) {
         var position = data[array_index].length;
-        highlight(data, attr, position, array_index, colors, function () {
-            $(attr).empty();
-        });
+        if(boolhighlight) {
+            highlight(data, attr, position, array_index, colors, function () {
+                $(attr).empty();
+            });
+        } else {
+            backspace(data, attr, position-1, array_index, interval);
+        }
 
         string_index = -1;
         if(data.length - 1 === array_index) {
             array_index = 0;
-            showArray(data, attr, string_index, array_index, interval, colors);
+            showArray(data, attr, string_index, array_index, interval, colors, boolhighlight);
         } else {
-            showArray(data, attr, string_index, array_index+1, interval, colors);
+            showArray(data, attr, string_index, array_index+1, interval, colors, boolhighlight);
         }
+    };
+
+    var backspace = function (data, attr, string_index, array_index, interval) {
+
+        var string = data[array_index];
+
+        if (string_index >= 0 ) {
+            $(attr).html(string.slice(0,string_index));
+            setTimeout(function () {
+                backspace(data, attr, string_index-1, array_index, interval);
+            }, 15);
+        } else {
+            //showArray(data, attr, string_index, array_index+1, interval);
+        }
+
     };
 
     return TyperJs;
