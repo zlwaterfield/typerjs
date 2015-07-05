@@ -29,6 +29,13 @@ module.exports = function (grunt) {
                 dest: 'dist/typerjs.min.js'
             }
         },
+        browserify: {
+            dist: {
+                files: {
+                    'build/app.bundle.js': ['examples/script.js']
+                }
+            }
+        },
         jshint: {
             options: {
                 node: true,
@@ -44,8 +51,8 @@ module.exports = function (grunt) {
                 eqnull: true,
                 browser: true,
                 globals: {
-                    jQuery: false,
-                    $: false
+                    //jQuery: false,
+                    //$: false
                 },
                 boss: true
             },
@@ -54,9 +61,9 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            lib: {
-                files: '<%= jshint.lib.src %>',
-                tasks: ['jshint:gruntfile']
+            app: {
+                files: ['src/typerjs.js','examples/script.js'],
+                tasks: ['browserify']
             },
             livereload: {
                 options: {
@@ -84,6 +91,7 @@ module.exports = function (grunt) {
     });
 
     // These plugins provide necessary tasks
+    grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -94,6 +102,7 @@ module.exports = function (grunt) {
     // Default task
     grunt.registerTask('default', [
         'jshint',
+        'browserify',
         'connect',
         'watch'
     ]);

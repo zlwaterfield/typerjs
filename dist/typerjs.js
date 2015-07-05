@@ -1,6 +1,8 @@
-var TyperJs = (function () {
+var $ = require('jquery');
 
-    function TyperJs(opts) {
+var typerJs = (function () {
+
+    function typerJs(opts) {
 
         var data = opts.data;
 
@@ -145,7 +147,7 @@ var TyperJs = (function () {
 
     };
 
-    return TyperJs;
+    return typerJs;
 })();
 
-module.exports = TyperJs;
+module.exports = typerJs;

@@ -3,6 +3,8 @@
 
 Introduction
 ------------
+Typing is hard, let Typer.js do it for you.
+
 Simple function that types out strings and arrays of strings for cool typing effects
 
 First run
