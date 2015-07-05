@@ -1,6 +1,6 @@
 {
   "name": "typerjs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple function that types ourt strings and arrays of strings for cool typing effects",
   "main": "Gruntfile.js",
   "dependencies": {
