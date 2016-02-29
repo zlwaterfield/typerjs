@@ -1,4 +1,4 @@
-![alt text](http://zlwaterfield.com/images/projects/typerjs-small.png "Logo") (v 0.0.6 beta)
+![alt text](http://zlwaterfield.com/images/projects/typerjs-small.png "Logo")
 =======================================================================================
 
 Introduction
