@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         browserify: {
             dist: {
                 files: {
-                    'build/app.bundle.js': ['examples/script.js']
+                    'examples/build/app.bundle.js': ['examples/script.js']
                 }
             }
         },
