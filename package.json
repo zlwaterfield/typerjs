@@ -2,7 +2,7 @@
   "name": "typerjs",
   "version": "1.0.0",
   "description": "Simple function that types ourt strings and arrays of strings for cool typing effects",
-  "main": "Gruntfile.js",
+  "main": "dist/typerjs.min.js",
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.3.0",
