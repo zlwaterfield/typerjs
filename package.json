@@ -1,6 +1,6 @@
 {
   "name": "typerjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple function that types ourt strings and arrays of strings for cool typing effects",
   "main": "dist/typerjs.min.js",
   "dependencies": {
@@ -29,5 +29,6 @@
   "homepage": "https://github.com/zlwaterfield/typerjs",
   "devDependencies": {
     "grunt-browserify": "^3.8.0"
-  }
+  },
+  "readmeFilename": "README.md"
 }

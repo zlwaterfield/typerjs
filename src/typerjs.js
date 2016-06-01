@@ -1,3 +1,7 @@
+// TyperJs Version 1.02
+// Created by Zach Waterfield
+// http://github.com/zlwaterfield/typerjs
+
 var $ = require('jquery');
 
 var typerJs = (function () {
